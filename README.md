@@ -58,22 +58,6 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173)
 
-## Civic Authentication
-
-The app uses Civic Auth with PKCE (no SDK needed — pure browser crypto).
-
-**How it works:**
-1. User clicks "Continue with Civic"
-2. A popup opens to `auth.civic.com`
-3. After verification, the popup redirects to `/auth/callback`
-4. The main window polls the popup, extracts the auth code, and exchanges it for an id_token
-5. The user object is stored in sessionStorage
-
-**To use your own Civic app:**
-1. Register at [civic.com](https://www.civic.com)
-2. Replace `CIVIC_CLIENT_ID` in `src/lib/civicAuth.tsx`
-3. Add `http://localhost:5173/auth/callback` as an allowed redirect URI
-
 ## Project Structure
 
 ```
