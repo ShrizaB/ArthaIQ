@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 40 30% 94%;
+    --card: 0 0% 8%;
+    --card-foreground: 40 30% 94%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 30% 94%;
+    --primary: 43 54% 54%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 40 20% 63%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 30 10% 35%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 40 30% 94%;
+    --destructive: 0 47% 53%;
+    --destructive-foreground: 40 30% 94%;
+    --border: 30 8% 16%;
+    --input: 30 8% 16%;
+    --ring: 43 54% 54%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    background-color: #0D0D0D;
+    color: #F5F0E8;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2E2E2E;
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3A3530;
+  }
+}
+
+@layer components {
+  .aq-card {
+    @apply bg-surface-1 border border-rule rounded-2xl;
+  }
+
+  .aq-label {
+    @apply text-[10px] font-mono text-ink-3 tracking-[0.12em] uppercase;
+  }
+
+  .aq-num-hero {
+    @apply font-serif text-5xl text-ink tracking-[-0.03em] leading-none;
+  }
+
+  .aq-num-lg {
+    @apply font-serif text-3xl text-ink tracking-[-0.02em] leading-none;
+  }
+
+  .aq-num-md {
+    @apply font-serif text-2xl text-ink tracking-[-0.02em] leading-none;
+  }
+
+  .aq-num-sm {
+    @apply font-serif text-xl text-ink tracking-[-0.01em] leading-none;
+  }
+
+  .aq-hint {
+    @apply text-[11px] font-mono text-ink-3 mt-1.5;
+  }
+
+  .aq-tag {
+    @apply text-[10px] font-mono text-ink-3 bg-surface-3 px-2 py-0.5 rounded border border-rule;
+  }
+
+  .aq-tag-gold {
+    @apply text-[10px] font-mono text-gold bg-gold/10 px-2 py-0.5 rounded border border-gold/20;
+  }
+
+  .aq-tag-green {
+    @apply text-[10px] font-mono text-gain bg-gain/10 px-2 py-0.5 rounded border border-gain/20;
+  }
+
+  .aq-tag-red {
+    @apply text-[10px] font-mono text-loss bg-loss/10 px-2 py-0.5 rounded border border-loss/20;
+  }
+
+  .aq-bar-bg {
+    @apply h-1 bg-surface-4 rounded-full overflow-hidden;
+  }
+
+  .aq-insight {
+    @apply flex gap-2.5 p-3.5 rounded-xl border;
+  }
+
+  .nav-btn {
+    @apply flex items-center gap-2.5 px-3 py-2 rounded-xl cursor-pointer w-full border-none
+           font-sans text-[13px] text-ink-2 transition-all duration-150 text-left mb-0.5
+           hover:bg-surface-3 hover:text-ink;
+  }
+
+  .nav-btn.active {
+    @apply bg-surface-2 text-ink border border-rule;
+  }
+
+  .chat-bubble-ai {
+    @apply bg-surface-2 border border-rule rounded-[4px_14px_14px_14px] px-3.5 py-2.5
+           text-[13px] text-ink leading-relaxed self-start max-w-[82%];
+  }
+
+  .chat-bubble-me {
+    @apply bg-gold rounded-[14px_4px_14px_14px] px-3.5 py-2.5
+           text-[13px] text-bg font-medium leading-relaxed self-end max-w-[82%];
+  }
+}
